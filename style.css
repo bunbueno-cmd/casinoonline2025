@@ -1,0 +1,193 @@
+ <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #e6f0ff, #fdfdff);
+            background-attachment: fixed;
+            color: #222;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            filter: blur(50px);
+            z-index: 0;
+        }
+        body::before {
+            top: -200px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.3), transparent 70%);
+        }
+        body::after {
+            bottom: -200px;
+            left: -100px;
+            background: radial-gradient(circle, rgba(221, 160, 221, 0.3), transparent 70%);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .casino-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .casino-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid #f1f1f1;
+            transition: transform 0.3s ease;
+        }
+
+        .casino-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .logo {
+    flex: 1 1 300px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .casino-content {
+            flex: 3 1 500px;
+            padding: 20px;
+        }
+
+        .casino-content h2 {
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: #ffaa00;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bonus {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-left: 4px solid #00bcd4;
+            margin-bottom: 12px;
+            font-weight: bold;
+            color: #01727c;
+        }
+
+        .features {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn-play {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #2196f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .btn-play:hover {
+            background: #1976d2;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .promo-copy {
+            background: none;
+            border: none;
+            color: #e91e63;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 5px;
+        }
+
+        .promo-copy:hover {
+            text-decoration: underline;
+        }
+
+        .copied-msg {
+            display: none;
+            margin-left: 10px;
+            color: #4caf50;
+            font-size: 14px;
+        }
+
+        .copied-msg.show {
+            display: inline;
+            animation: fadeOut 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            70% { opacity: 1; }
+            100% { opacity: 0; display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .casino-card {
+                flex-direction: column;
+                align-items: center;
+            }
+            .casino-content {
+                text-align: center;
+            }
+        }
+    </style>
